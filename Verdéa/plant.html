@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plant.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Verdéa - Plants</title>
+</head>
+<body>
+
+     <header class="header">
+         <div class="container nav-wrap">
+            <!-- logo section -->
+            <a href="index.html"  class="brand">
+                <span class="brand__mark" aria-hidden="true">
+                    <img src="pictures/icons/logo.png" alt="website logo">
+                </span>
+                 <span class="brand__text">
+                  <span class="brand__name">Verdéa</span>
+                </span>
+            </a>
+
+            <!-- Navigation bar -->
+           <nav class="nav">
+              <a href="index.html" class="nav-links">Home</a>
+              <a href="plant.html" class="nav-links">Plants</a>
+              <a href="about.html" class="nav-links">About</a>
+           </nav>
+
+
+            <!-- Search bar -->
+            <div class="nav-actions">
+              <form class="nav-search" action="plant.html" method="get">
+
+                <input type="search" name="q" placeholder="Search plants..." autocomplete="off" aria-label="Search plants">
+
+              </form>
+
+              <!-- Favorites section -->
+               <a class="nav-fav" href="favorites.html" aria-label="Favorites">
+                <img src="pictures/icons/bookmark_1118299.png" alt="Favorites icon" class="nav-fav-img">
+               </a>
+            </div>
+
+         </div>
+    </header>
+    
+    <main class="plant-page">
+
+        <h1 class="main-header">Plants</h1>
+
+        <!-- Filters section -->
+         <section class="filters" aria-label="Filters">
+            <div class="filters-raw">
+
+                <!-- Types -->
+                <label class="filter">
+                    <span class="filter-label">Type</span>
+                    <select class="filter-select">
+                        <option value="">All</option>
+                        <option value="indoor">Indoor</option>
+                        <option value="outdoor">Outdoor</option>
+                        <option value="succulent">Succulent</option>
+                    </select>
+                </label>
+
+                <!-- Light -->
+                <label class="filter">
+                    <span class="filter-label">Light</span>
+                    <select class="filter-select">
+                        <option value="">All</option>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="bright">Bright</option>
+                    </select>
+                </label>
+
+                <!-- Water -->
+                <label class="filter">
+                    <span class="filter-label">Water</span>
+                    <select class="filter-select">
+                        <option value="">All</option>
+                        <option value="weekly">Weekly</option>
+                        <option value="biweekly">Biweekly</option>
+                        <option value="monthly">Monthly</option>
+                    </select>
+                </label>
+
+                <!-- Pet-friendly -->
+                <label class="filter">
+                    <span class="filter-label">Pet-friendly</span>
+                    <select class="filter-select">
+                        <option value="">All</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </label>
+
+                <!-- Clear button -->
+                  <button class="filter-clear" type="button">Clear filters</button>
+
+            </div>
+         </section>
+
+         <!-- Plants Section -->
+        <section class="plants-grid" aria-label="Plants list">
+
+            <!-- Cards -->
+            <article class="plant-card" data-type="indoor" data-light="High" data-water="weekly" data-pet="yes">
+                <a class="plant-link" href="plant-details.html?id=monstera">
+                    <div class="plant-media">
+                        <img src="pictures/plants/monstera.webp" alt="Monstera Deliciosa">
+                    </div>
+
+                    <div class="plant-body">
+                        <h2 class="plant-name">Monstera Deliciosa</h2>
+
+                        <div class="pod-chips">
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/indoor-plant.png"> Indoor</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/high light.png">indirect light</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/weekly.png">water weekly</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/pet friendly.png">Pet-friendly</span>
+                       </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="plant-card" data-type="succulent" data-light="High" data-water="Monthly" data-pet="no">
+               <a class="plant-link"  href="plant-details.html?id=aloe">
+                   <div class="plant-media">
+                      <img src="pictures/plants/Aloe vera.png" alt="Aloe Vera">
+                   </div>
+
+                    <div class="plant-body">
+                      <h2 class="plant-name">Aloe Vera</h2>
+                        <div class="pod-chips">
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/succulent.png"> succulent</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/high light.png">High light</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/monthly.png">water Monthly</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/not pet friendly.png">Not pet-friendly</span>
+                       </div>
+                    </div>
+               </a>
+            </article>
+
+            <article class="plant-card" data-type="indoor" data-light="medium" data-water="Biweekly" data-pet="no">
+            <a class="plant-link"  href="plant-details.html?id=aloe">
+                <div class="plant-media">
+                    <img src="pictures/plants/snakeplant.jpg" alt="snake plant">
+                </div>
+
+                <div class="plant-body">
+                    <h2 class="plant-name">Snake plant</h2>
+                <div class="pod-chips">
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/indoor-plant.png">Indoor</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/medium light.png">Medium light</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/biweekly.png">water Biweekly</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/not pet friendly.png">Not pet-friendly</span>
+                </div>
+              </div>
+             </a>
+            </article>
+
+            <article class="plant-card" data-type="indoor" data-light="medium" data-water="Biweekly" data-pet="no">
+            <a class="plant-link"  href="plant-details.html?id=aloe">
+                <div class="plant-media">
+                    <img src="pictures/plants/zz plant.jpeg" alt="ZZ plant">
+                </div>
+
+                <div class="plant-body">
+                    <h2 class="plant-name">Zamioculcas</h2>
+                <div class="pod-chips">
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/indoor-plant.png">Indoor</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/medium light.png">Medium light</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/biweekly.png">water Biweekly</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/not pet friendly.png">Not pet-friendly</span>
+                </div>
+              </div>
+             </a>
+            </article>
+
+            <article class="plant-card" data-type="succulent" data-light="High" data-water="Biweekly" data-pet="yes">
+             <a class="plant-link"  href="plant-details.html?id=aloe">
+                <div class="plant-media">
+                    <img src="pictures/plants/Echeveria.webp" alt="Echeveria">
+                </div>
+
+                <div class="plant-body">
+                    <h2 class="plant-name">Echeveria</h2>
+                <div class="pod-chips">
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/succulent.png">Succulents</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/high light.png">High light</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/biweekly.png">water Biweekly</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/pet friendly.png"> pet-friendly</span>
+                </div>
+              </div>
+             </a>
+            </article>
+
+            <article class="plant-card" data-type="outdoor" data-light="High" data-water="weekly" data-pet="yes">
+                <a class="plant-link" href="plant-details.html?id=monstera">
+                    <div class="plant-media">
+                        <img src="pictures/plants/Lavender.png" alt="Lavender">
+                    </div>
+
+                    <div class="plant-body">
+                        <h2 class="plant-name">Lavender</h2>
+
+                        <div class="pod-chips">
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/park.png">Outdoor</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/high light.png">indirect light</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/weekly.png">water weekly</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/pet friendly.png">Pet-friendly</span>
+                       </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="plant-card" data-type="indoor" data-light="medium" data-water="weekly" data-pet="no">
+            <a class="plant-link"  href="plant-details.html?id=aloe">
+                <div class="plant-media">
+                    <img src="pictures/plants/Peace Lily.jpeg" alt="Peace Lily">
+                </div>
+
+                <div class="plant-body">
+                    <h2 class="plant-name">Peace Lily</h2>
+                <div class="pod-chips">
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/indoor-plant.png">Indoor</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/medium light.png">Medium light</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/weekly.png">water weekly</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/not pet friendly.png">Not pet-friendly</span>
+                </div>
+              </div>
+             </a>
+            </article>
+
+            <article class="plant-card" data-type="outdoor" data-light="High" data-water="weekly" data-pet="yes">
+                <a class="plant-link" href="plant-details.html?id=monstera">
+                    <div class="plant-media">
+                        <img src="pictures/plants/Jasmine.png" alt="Jasmine">
+                    </div>
+
+                    <div class="plant-body">
+                        <h2 class="plant-name">Jasmine</h2>
+
+                        <div class="pod-chips">
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/park.png">Outdoor</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/high light.png">indirect light</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/weekly.png">water weekly</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/pet friendly.png">Pet-friendly</span>
+                       </div>
+                    </div>
+                </a>
+            </article>
+
+            <article class="plant-card" data-type="succulent" data-light="High" data-water="Biweekly" data-pet="no">
+             <a class="plant-link"  href="plant-details.html?id=aloe">
+                <div class="plant-media">
+                    <img src="pictures/plants/Jade Plant.jpg" alt="Jade Plant">
+                </div>
+
+                <div class="plant-body">
+                    <h2 class="plant-name">Jade Plant</h2>
+                <div class="pod-chips">
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/succulent.png">Succulents</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/high light.png">High light</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/biweekly.png">water Biweekly</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/not pet friendly.png">Not pet-friendly</span>
+                </div>
+              </div>
+             </a>
+            </article>
+
+            <article class="plant-card" data-type="indoor" data-light="High" data-water="Biweekly" data-pet="no">
+            <a class="plant-link"  href="plant-details.html?id=aloe">
+                <div class="plant-media">
+                    <img src="pictures/plants/Ficus elastica.png" alt="Ficus elastica">
+                </div>
+
+                <div class="plant-body">
+                    <h2 class="plant-name">Ficus elastica</h2>
+                <div class="pod-chips">
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/indoor-plant.png">Indoor</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/Medium light.gif">Bright light</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/biweekly.png">water Biweekly</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/not pet friendly.png">Not pet-friendly</span>
+                </div>
+              </div>
+             </a>
+            </article>
+
+            <article class="plant-card" data-type="indoor" data-light="Low" data-water="weekly" data-pet="yes">
+            <a class="plant-link"  href="plant-details.html?id=aloe">
+                <div class="plant-media">
+                    <img src="pictures/plants/Goeppertia.png" alt="Goeppertia">
+                </div>
+
+                <div class="plant-body">
+                    <h2 class="plant-name">Goeppertia</h2>
+                <div class="pod-chips">
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/indoor-plant.png">Indoor</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/low light.png">Low light</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/weekly.png">water weekly</span>
+                    <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/pet friendly.png">Pet-friendly</span>
+                </div>
+              </div>
+             </a>
+            </article>
+
+            <article class="plant-card" data-type="outdoor" data-light="High" data-water="weekly" data-pet="no">
+                <a class="plant-link" href="plant-details.html?id=monstera">
+                    <div class="plant-media">
+                        <img src="pictures/plants/Bougainvillea.png" alt="Bougainvillea">
+                    </div>
+
+                    <div class="plant-body">
+                        <h2 class="plant-name">Bougainvillea</h2>
+
+                        <div class="pod-chips">
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/park.png">Outdoor</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/high light.png">indirect light</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/weekly.png">water weekly</span>
+                          <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/not pet friendly.png">Not Pet-friendly</span>
+                       </div>
+                    </div>
+                </a>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+
+        <p class="footer-copy">© 2026 Verdéa. All  rights reserved</p>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="plant.html">Plants</a>
+          <a href="?">About</a>
+        </nav>
+
+      </div>
+    </footer>
+    <script src="bootstrap-5.3.8-dist\js\bootstrap.min.js"></script>
+    
+</body>
+</html>

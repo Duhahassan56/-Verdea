@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keyword" content="plants, How to, take care, indoor plants, outdoor plants, succulents, houseplants, plant care, plant guide, greenery, minimal plants, botanical website">
+    <meta name="description" content="Verdéa is a calm, minimal guide to indoor, outdoor, and succulent plants. Explore plant types, care tips, and green inspiration.">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Verdéa</title>
+</head>
+<body>
+
+    <header class="header">
+         <div class="container nav-wrap">
+            <!-- logo section -->
+            <a href="index.html"  class="brand">
+                <span class="brand__mark" aria-hidden="true">
+                    <img src="pictures/icons/logo.png" alt="website logo">
+                </span>
+                 <span class="brand__text">
+                  <span class="brand__name">Verdéa</span>
+                </span>
+            </a>
+
+            <!-- Navigation bar -->
+           <nav class="nav">
+              <a href="index.html" class="nav-links">Home</a>
+              <a href="plant.html" class="nav-links">Plants</a>
+              <a href="about.html" class="nav-links">About</a>
+           </nav>
+
+
+            <!-- Search bar -->
+            <div class="nav-actions">
+              <form class="nav-search" action="plant.html" method="get">
+
+                <input type="search" name="q" placeholder="Search plants..." autocomplete="off" aria-label="Search plants">
+
+              </form>
+
+              <!-- Favorites section -->
+               <a class="nav-fav" href="favorites.html" aria-label="Favorites">
+                <img src="pictures/icons/bookmark_1118299.png" alt="Favorites icon" class="nav-fav-img">
+               </a>
+            </div>
+
+         </div>
+    </header>
+
+    <main>
+        <!-- Hero section -->
+        <section class="hero">
+
+          <img src="pictures/hero pic.png" alt="Hero Picture" class="hero_pic">
+
+             <div class="hero_content">
+                <h1>Where plants quietly belong</h1>
+                <p>A gentle collection of plants, made for curious minds and calm spaces</p>
+             </div>
+
+        </section>
+
+        <!-- Why Verdéa? section -->
+        <section class="intro" id="about">
+          <div  class="container intro-layout">
+            <div class="intro-text">
+                <h1>Why <span class="web_name">Verdéa</span>?</h1>
+                <p>Explore plants, their forms, and the quiet beauty of green life with guidance that's easy to understand and enjoyable to read.</p>
+            </div>
+
+            <img src="pictures/side pic.png" alt="hand holding leafs" class="intro-decor"
+            aria-hidden="true">
+
+          </div> 
+        </section>
+
+        <!-- Daily section -->
+       <section class="daily">
+        <div class="container daily-grid">
+
+          <!-- Plant of the day -->
+          <div class="daily-plant">
+            <div class="pod">
+
+              <div class="pod-media">
+                <img class="pod-img" src="pictures\plants\Monstera Deliciosa removebg.png" alt="plant of the day">
+              </div>
+
+              <div class="pod-content">
+                <p class="pod-label">Plant of the day</p>
+                <h2 class="pod-title">Monstera Deliciosa</h2>
+                <p class="pod-desc">A stylish indoor favorite that grows fast and brings a fresh, tropical vibe to your space</p>
+              </div>
+
+              <div class="pod-chips">
+                <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/indoor-plant.png"> Indoor</span>
+                <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/high light.png">indirect light</span>
+                <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/weekly.png">water weekly</span>
+              </div>
+
+              <div class="pod-action">
+                <a class="pod-btn" href="?">View details</a>
+              </div>
+            </div>
+            
+          </div>
+
+          <!-- Mini quiz -->
+          <aside class="quiz" aria-label="mini quiz">
+            <h2 class="quiz-tittle">Find the Best Plant for You</h2>
+            <p class="quiz-dec">Answer a few questions and discover your ideal plant.</p>
+
+            <form class="quiz" id="miniquiz">
+              <!-- Q1 -->
+              <fieldset class="quiz-q">
+                <legend class="quiz-q-tittle">How much light do you have?</legend>
+
+                <label class="quiz-opt">
+                  <input type="radio" name="q1" value="a"> High light
+                </label>
+   
+                <label class="quiz-opt">
+                  <input type="radio" name="q1" value="b"> Medium light
+                </label>
+
+                <label class="quiz-opt">
+                  <input type="radio" name="q1" value="c"> Low light
+                </label> 
+              </fieldset>
+
+              <!-- Q2 -->
+              <fieldset class="quiz-q">
+                <legend class="quiz-q-tittle">What type of plant are you looking for?</legend>
+
+                <label class="quiz-opt">
+                  <input type="radio" name="q2" value="a"> Indoor plant
+                </label>
+   
+                <label class="quiz-opt">
+                  <input type="radio" name="q2" value="b"> Outdoor plant
+                </label>
+
+                <label class="quiz-opt">
+                  <input type="radio" name="q2" value="c"> Succulent 
+                </label>
+              </fieldset>
+
+              <div class="quiz-action">
+                <button type="submit" class="quiz-btn">Find My Plant</button>
+              </div>
+
+              <p class="quiz-result" id="quizReset" aria-live="polite"></p>
+            </form>
+            
+            <!-- after the quiz result -->
+            <div id="quizResults" class="quiz-result hidden">
+              <div class="result-grid">
+                <a href="?" class="plant-mini-card">
+                  <img src="pictures/succulent plant .jpg" alt="?">
+                  <h4>plant name</h4>
+                </a>
+
+                <a href="?" class="plant-mini-card">
+                  <img src="pictures/succulent plant .jpg" alt="?">
+                  <h4>plant name</h4>
+                </a>
+              </div>
+
+              <!-- button to show all results -->
+              <a href="?" class="view-all">
+                View all recommended plants
+              </a>
+            </div>
+          </aside>
+
+        </div>
+       </section>
+
+        <!-- Plants types section -->
+        <section class="plants">
+
+            <div class="container">
+
+              <h1 class="section_title">Inside <span class="web_name">Verdéa</span></h1>
+           
+
+             <div class="cards">
+                <!-- Indoor card -->
+                <article class="card">
+                  <a href="plant.html?type=indoor" class="type-link">
+                    <img src="pictures/indoor plants.jpg" alt="indoor plants" class="card img">
+                    <div class="card-content">
+                     <h3>Indoor Plants</h3>
+                     <p>Plants that grow well inside homes</p>
+                    </div>
+                  </a>
+                </article>
+
+                <!-- Outdoor card -->
+                <article class="card">
+                  <a href="plant.html?type=outdoor" class="type-link">
+                    <img src="pictures/outdoor plants.jpg" alt="outdoor plants" class="card img">
+                    <div class="card-content">
+                     <h3>Outdoor Plants</h3>
+                     <p>Plants that thrive in open spaces</p>
+                    </div>
+                  </a>
+                </article>
+              
+
+                <!-- Succulents card -->
+                <article class="card">
+                  <a href="plant.html?type=succulent" class="type-link">
+                    <img src="pictures/Succulents.webp" alt="Succulents plants" class="card img">
+                    <div class="card-content">
+                     <h3>Succulents</h3>
+                     <p>Low-maintenance plants that store water</p>
+                    </div>
+                  </a>
+                </article>
+              </div>
+             
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+
+        <p class="footer-copy">© 2026 Verdéa. All rights reserved</p>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="plant.html">Plants</a>
+          <a href="?">About</a>
+        </nav>
+
+      </div>
+    </footer>
+
+</body>
+</html>
