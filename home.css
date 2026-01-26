@@ -102,9 +102,10 @@
 /* why us section */
 .intro {
   padding-top: 160px;   
-  padding-bottom: 20px;
+  padding-bottom: 40px;
   margin-top: -80px;
 }
+
 
 .intro-layout {
   display: flex;
@@ -135,7 +136,7 @@
   max-width: 45%;   
   width: 620px;
   opacity: 0.9;
-  margin-right: -20px;
+  margin-right: -40px;
   flex-shrink: 0;
 }
 
@@ -171,9 +172,45 @@
   }
 }
 
+/* Why points */
+.why-verdea-points {
+  padding-top: 0;
+  position: relative;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.why-item h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #444;
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .intro {
+    padding-bottom: 24px;
+  }
+}
+
+
 /* Daily section */
 .daily {
-  padding: 10px 0;
+  padding: 10px 40px;
 }
 
 .daily-grid{
@@ -181,8 +218,8 @@
   margin: 0 auto;
   padding: 0 24px;
   display: grid;
-  grid-template-columns: 2fr 1.4fr;
-  gap: 30px;
+  grid-template-columns: 65% 35%;
+  gap: 60px;
   align-items: start;
 }
 
@@ -192,6 +229,16 @@
   }
 }
 
+.daily::before {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 2px;
+  background: #7fa26b;
+  margin: 50px auto 100px;
+  opacity: 0.4;
+}
+
 /* Mini Quiz */
 .quiz {
   background:  rgba(255, 255, 255, 0.55);
@@ -199,7 +246,7 @@
   border-radius: 18px;
   padding: 20px;
   max-width: 520px;
-  min-width: 360px;
+  min-width: 0;
   width: 100%;
   justify-content: end;
   margin-left: auto;
