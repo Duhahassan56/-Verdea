@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="about.css">
+    <title>Verdéa - About</title>
+</head>
+<body>
+
+    <header class="header">
+         <div class="container nav-wrap">
+            <!-- logo section -->
+            <a href="index.html"  class="brand">
+                <span class="brand__mark" aria-hidden="true">
+                    <img src="pictures/icons/logo.png" alt="website logo">
+                </span>
+                 <span class="brand__text">
+                  <span class="brand__name">Verdéa</span>
+                </span>
+            </a>
+
+            <!-- Navigation bar -->
+           <nav class="nav">
+              <a href="index.html" class="nav-links">Home</a>
+              <a href="plant.html" class="nav-links">Plants</a>
+              <a href="about.html" class="nav-links">About</a>
+           </nav>
+
+
+            <!-- Search bar -->
+            <div class="nav-actions">
+              <form class="nav-search" action="plant.html" method="get">
+
+                <input type="search" name="q" placeholder="Search plants..." autocomplete="off" aria-label="Search plants">
+
+              </form>
+
+              <!-- Favorites section -->
+               <a class="nav-fav" href="favorites.html" aria-label="Favorites">
+                <img src="pictures/icons/bookmark_1118299.png" alt="Favorites icon" class="nav-fav-img">
+               </a>
+            </div>
+
+         </div>
+    </header>
+    
+    <main>
+
+        <!-- mini hero -->
+        <section class="hero">
+
+          <img src="pictures/about hero.jpg" alt="Hero Picture" class="hero-pic">
+
+          <div class="hero-overlay"></div>
+
+            <div class="hero-section">
+                <h1 class="hero-name">About <span class="web-name">Verdéa</span></h1>
+                <p class="hero-desc">
+                  A calm space to explore plants, understand their needs, and build a deeper connection with green life
+                </p>
+            </div>
+
+        </section>  
+        
+        <!-- story section -->
+        <section class="story">
+            <div class="story-grid">
+                <div class="story-contect">
+                    <h2 class="story-name">Our Story</h2>
+                    <p class="story-decs"><b><span class="web-name">Verdéa</span></b> was created to make plant care simple, and accessible for everyone <br> We noticed how confusing and overwhelming plant information can be, so we designed a place that feels clear, and friendly. This project is built for curious minds, beginners, and plant lovers who want to grow with confidence</p>
+                </div>
+
+                <div class="story-img-wrapper">
+                  <img src="pictures/story pic.jpg" alt="our story picture" class="story-img">
+                  <div class="story-overlay"></div>
+                </div>
+        </section>
+
+        <!-- defines -->
+        <section class="defines">
+            <div class="defines-grid">
+
+                <h2 class="defines-h">What Makes <span class="web-name">Verdéa</span> Different?</h2>
+
+                <!-- box 1 -->
+                <div class="box bordered-box">
+                    <h3 class="box-title cut-tittle">Simple Guidance</h3>
+
+                    <p class="box-p">
+                      Clear, easy to understand plant care without complicated terms
+                    </p>
+                </div>
+
+                <!-- box 2 -->
+                <div class="box bordered-box">
+                    
+                    <h3 class="box-tittle cut-tittle">Curated Knowledge</h3>
+                   
+                    <p class="box-p">
+                      Each plant is carefully selected with practical, useful information
+                    </p>
+                    
+                </div>
+
+                <!-- box 3 -->
+                <div class="box bordered-box">
+                    
+                    <h3 class="box-tittle cut-tittle">Calm Experience</h3>
+                    
+                    <p class="box-p">
+                      A clean, soft design that makes browsing plants relaxing and enjoyable
+                    </p>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- care section -->
+        <section class="care">
+
+            <div class="care-h">
+                <h2 class="care-tittle">Our Values</h2>
+            </div>
+            <div class="care-grid">
+                
+                <!-- care 1 -->
+                <div class="care-decs">
+                    <p class="care-p">We believe plants should be easy to care for, not stressful</p>
+                </div>
+
+                <!-- care 2 -->
+                <div class="care-decs">
+                    <p class="care-p">We value simplicity, clarity, and beauty in every detail</p>
+                </div>
+
+                <!-- care 3 -->
+                <div class="care-decs">
+                    <p class="care-p">We aim to help people grow alongside their plants</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- suggest section -->
+        <section class="suggest">
+            <div class="suggest-grid">
+
+                <div class="suggest-box">
+                  <h2>Share Your Thoughts</h2>
+                  <p>Help us improve <b><span class="web-name">Verdéa</b></span><br> Share your ideas, report an issue, or suggest improvements</p>
+                </div>
+
+              <div class="suggest-form">
+                <form class="suggest-f">
+
+                  <select required aria-label="Feedback type">
+                      <option value="" disabled selected>Select type</option>
+                      <option>Suggestion</option>
+                      <option>Issue / Bug</option>
+                      <option>Complaint</option>
+                  </select>
+
+                  <input type="email" placeholder="Email" aria-label="Your email">
+
+                  <textarea placeholder="Write your message here..." aria-label="Message" required></textarea>
+
+                  <button type="submit" class="btn">Send feedback</button>
+
+                </form>
+              </div>
+            </div>
+       </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <div class="cta-box">
+                <h2>Ready to Explore?</h2>
+                <p>Start discovering plants that match your space and lifestyle</p>
+                <a class="btn cta-btn" href="index.html">Explore <span class="web-name">Verdéa</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+
+        <p class="footer-copy">© 2026 Verdéa. All  rights reserved</p>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="plant.html">Plants</a>
+          <a href="?">About</a>
+        </nav>
+
+      </div>
+    </footer>
+    
+</body>
+</html>
