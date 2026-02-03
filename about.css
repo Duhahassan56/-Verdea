@@ -289,7 +289,10 @@ p {
     text-decoration: none;
     color: #191818;
     font-size: 18px;
-    background: #A0C878;
+}
+
+.cta-btn:hover {
+  background: #A0C878;
 }
 
 /* Responsive */
@@ -359,4 +362,5 @@ p {
 
   .cta-box h2 { font-size: 30px; }
   .cta-box p { font-size: 16px; }
+
 }
