@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="plant.css">
+    <link rel="stylesheet" href="favorites.css">
+    <title>Verdéa - Favorites</title>
+</head>
+<body class="page-favorites">
+    <!-- navbar -->
+    <header class="header">
+         <div class="container nav-wrap">
+            <!-- logo section -->
+            <a href="index.html"  class="brand">
+                <span class="brand__mark" aria-hidden="true">
+                    <img src="pictures/icons/logo.png" alt="website logo">
+                </span>
+                 <span class="brand__text">
+                  <span class="brand__name">Verdéa</span>
+                </span>
+            </a>
+
+            <!-- Navigation bar -->
+           <nav class="nav">
+              <a href="index.html" class="nav-links">Home</a>
+              <a href="plant.html" class="nav-links">Plants</a>
+              <a href="about.html" class="nav-links">About</a>
+           </nav>
+
+
+            <!-- Search bar -->
+            <div class="nav-actions">
+              <form class="nav-search" action="plant.html" method="get">
+
+                <input type="search" name="q" placeholder="Search plants..." autocomplete="off" aria-label="Search plants">
+
+              </form>
+
+              <!-- Favorites section -->
+               <a class="nav-fav" href="favorites.html" aria-label="Favorites">
+                <img src="pictures/icons/bookmark_1118299.png" alt="Favorites icon" class="nav-fav-img">
+               </a>
+            </div>
+
+         </div>
+    </header>
+
+    <main>
+
+      <h1 class="main-header">Favorites</h1>
+
+      <!-- mini header -->
+      <section class="filters" aria-label="Favorites tools">
+        <div class="filters-raw">
+
+          <!-- Search -->
+          <label class="filter">
+            <span class="filter-label">Search</span>
+            <input type="search" class="filter-select" placeholder="Search favorites...">
+          </label>
+
+          <!-- Sort -->
+          <label class="filter">
+            <span class="filter-label">Sort</span>
+            <select class="filter-select">
+              <option value="new">Newest</option>
+              <option value="az">A–Z</option>
+            </select>
+          </label>
+
+          <!-- Clear -->
+          <button class="filter-clear" type="button">Clear</button>
+
+        </div>
+      </section>
+
+      <!-- Favorites list -->
+      <section class="plants-grid fav-grid" aria-label="Favorites list">
+
+        <!-- saved card -->
+        <article class="plant-card fav-card">
+          <a>
+            <div class="plant-media">
+              <a class="plant-link" href="plant-details.html?id=monstera">
+                <img src="pictures/plants/monstera.webp" alt="Monstera Deliciosa">
+              </a>
+            </div>
+
+            <div class="plant-body">
+              <div class="plant-title-row">
+                <h2 class="plant-name">Monstera Deliciosa</h2>
+
+                <button class="fav-icon" type="button" aria-label="Remove from favorites">
+                  <img src="pictures/icons/bookmark-fill.png" alt="">
+                </button>
+              </div>
+
+              <div class="pod-chips">
+                <span class="pod-chip"><img class="chip-icon" src="pictures/icons/indoor-plant.png"> Indoor</span>
+                <span class="pod-chip"><img class="chip-icon" src="pictures/icons/light.png"> Indirect</span>
+                <span class="pod-chip"><img class="chip-icon" src="pictures/icons/water.png"> Weekly</span>
+                <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/pet friendly.png">Pet-friendly</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article class="plant-card fav-card" data-type="indoor" data-light="medium" data-water="weekly" data-pet="no">
+          <a>
+            <div class="plant-media">
+              <a class="plant-link" href="plant-details.html?id=monstera">
+                <img src="pictures/plants/monstera.webp" alt="Monstera Deliciosa">
+              </a>
+            </div>
+            
+            <div class="plant-body">
+              <div class="plant-title-row">
+                <h2 class="plant-name">Peace Lily</h2>
+
+                <button class="fav-icon" type="button" aria-label="Remove from favorites">
+                  <img src="pictures/icons/bookmark-fill.png" alt="">
+                </button>
+              </div>
+
+              <div class="pod-chips">
+                <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/indoor-plant.png">Indoor</span>
+                <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/light.png">Medium light</span>
+                <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/water.png">water weekly</span>
+                <span class="pod-chip"> <img class="chip-icon" src="pictures/icons/not pet friendly.png">Not pet-friendly</span>
+              </div>
+            </div>
+          </a>
+        </article>
+
+       <!-- more later -->
+      </section>
+
+      <!-- Empty state  -->
+      <section class="fav-empty" aria-label="Empty favorites">
+        <div class="fav-empty-box">
+          <h2>No favorites yet</h2>
+          <p>Explore <span class="web-name"><b>Verdéa</b></span> and save your favorite plant to find it later</p>
+          <a class="pod-btn" href="plant.html">Explore Plants</a>
+        </div>
+      </section>
+
+        
+    </main>
+
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+
+        <p class="footer-copy">© 2026 Verdéa. All  rights reserved</p>
+
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="plant.html">Plants</a>
+          <a href="about.html">About</a>
+        </nav>
+
+      </div>
+    </footer>
+    
+</body>
+</html>
