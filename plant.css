@@ -1,13 +1,14 @@
 .main-header {
-    font-size: 58px;
-    margin: 15px;
-    font-family: 'Rosehot';
+  font-size: 58px;
+  margin: 15px;
+  font-family: 'Rosehot';
 
 }
 
 /* Filters section */
 .filters{
   padding: 14px clamp(16px, 4vw, 40px);
+  margin-left: 18px;
   border-bottom: 1px solid rgba(0,0,0,0.09);
 }
 
@@ -48,15 +49,16 @@ section.filters {
 
 
 .filter-clear {
-    border: 1px solid rgba(0,0,0,0.88);
-    background: rgba(0,0,0,0.06);
-    padding: 10px 14px;
-    border-radius: 999px;
-    cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.88);
+  background: #FEFAE0;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .filter-clear:hover {
-    background: rgba(0,0,0,0.12);
+  background: rgba(0, 0, 0, 0.027);
 }
 
 .filter-select.is-active{
@@ -72,21 +74,23 @@ section.filters {
     .filters-raw { grid-template-columns: 1fr;}
 }
 
-/* Page grid */
-.plants-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 30px;
-    margin: 40px 40px ;
+/* cards grid */
+.plants-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 35px;
+  max-width: 1900px;
+  padding: 40px 24px;
+  margin: 0 auto;
 }
 
-@media (max-width: 1024px) {
-    .plants-grid { grid-template-columns: repeat(2, 1fr);}
+@media (max-width: 1024px){
+  .plants-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 768px){
+  .plants-grid{ grid-template-columns: 1fr; }
 }
 
-@media (max-width: 600px) {
-    .plants-grid { grid-template-columns: 1fr;}
-}
 
 /* Plants Cards */
 .plant-card {
@@ -113,9 +117,9 @@ section.filters {
 
 /* Cards images */
 .plant-media {
-    aspect-ratio: 4/3;
-    overflow: hidden;
-    background: #eef2ea;
+  height: 180px;
+  overflow: hidden;
+  background: #eef2ea;
 }
 
 .plant-media img {
@@ -128,15 +132,15 @@ section.filters {
 
 /* Cards content */
 .plant-body {
-    padding: 18px 20px 22px;
+    padding: 14px 16px;
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 10px;
 }
 
 .plant-name {
     margin: 0;
-    font-size: 35px;
+    font-size: 24px;
     line-height: 1.2;
     font-family: 'Rosehot';
 }
@@ -282,21 +286,9 @@ section.filters {
 }
 
 .plant-card .pod-chip {
-    padding: 7px 12px;
-    font-size: 12px;
+    padding: 5px 10px;
+    font-size: 11px;
     border-radius: 999px;
 }
 
-/* cards grid */
-.plants-grid{
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
 
-@media (max-width: 1024px){
-  .plants-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 768px){
-  .plants-grid{ grid-template-columns: 1fr; }
-}
