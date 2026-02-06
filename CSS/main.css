@@ -1,0 +1,276 @@
+@font-face {
+  font-family: 'Rosehot';
+  src: url('fonts/Rosehot.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*  Global  */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+.html {
+  font-size: 18px;
+}
+
+body {
+  margin: 0;
+  background-color: #FEFAE0;
+  overflow-x: hidden;
+}
+
+/* responsive base */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  margin: auto;
+  padding: 24px;
+}
+
+/*  better text scaling */
+:root{
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --radius: 20px;
+}
+
+h1 { font-size: clamp(28px, 4vw, 46px); }
+h2 { font-size: clamp(22px, 3vw, 34px); }
+p  { font-size: clamp(14px, 1.8vw, 16px); line-height: 1.7; }
+
+/* NAVBAR */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #658147; 
+  border-bottom: 1px solid rgba(0,0,0,0.88);
+}
+
+.header .container {
+  padding: 18px 24px;
+}
+
+.nav-wrap{
+  margin-left: 0;
+  gap: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* left (brand) */
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  justify-content: start;
+}
+
+.brand__mark img {
+  width: 46px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-left: 0;
+}
+
+.brand__text {
+  display: grid;
+  line-height: 1.1;
+}
+
+.brand__name {
+  font-family: 'Rosehot', serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.web_name {
+  font-family: 'Rosehot', serif;
+}
+
+
+/* center (links) */
+.nav{
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 26px;
+  flex: 1;
+}
+
+.nav .nav-links {
+  text-decoration: none;
+  color: rgba(0,0,0,0.62);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 8px 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav .nav-links:hover {
+  color: rgba(0,0,0,0.9);
+}
+
+/* right (search + fav) */
+.nav-actions{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.nav-search {
+  margin: 0;
+}
+
+.nav-search input{
+  width: min(280px, 42vw); 
+  height: 42px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.88);
+  outline: none;
+}
+
+.nav-search input:focus {
+  background: rgba(255,255,255,0.88);
+  border-color: rgba(0,0,0,0.22);
+}
+
+.nav-fav{
+  width: 60px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 999px;
+}
+
+.nav-fav-img{
+  width: 28px;
+  height: auto;
+  display: flex;
+  opacity: 0.40; 
+  object-fit: contain;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-fav:hover .nav-fav-img{
+  opacity: 0.80;
+  transform: scale(1.06);
+}
+
+
+
+/* footer */
+.footer {
+  padding: 26px 0 20px; 
+  background:  #658147;
+  border-top: 1px solid rgba(0,0,0,0.88);
+}
+
+.footer .container {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-nav {
+  display: flex;
+  justify-self: center;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  opacity: 0.65;
+}
+
+.footer-nav a:hover {
+  opacity: 1;
+}
+
+.footer-copy {
+  font-size: 18px;
+  opacity: 0.6;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+
+/* Global Responsive Pack */
+
+/*  Base safety */
+img, video { max-width: 100%; height: auto; display: block; }
+
+/* Containers */
+.container{
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+}
+
+/* Big screens tablets */
+@media (max-width: 1024px){
+  /* plant details / home daily grids */
+  .daily-grid{ grid-template-columns: 1fr; gap: 28px; }
+  .pod{ grid-template-columns: 1fr; }
+}
+
+/*  tablets for phones */
+@media (max-width: 700px){
+  .nav-wrap{
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .nav{
+    order: 2;
+    flex: 0 0 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-actions{
+    order: 3;
+    flex: 0 0 100%;
+    justify-content: flex-start;
+  }
+
+  .nav-search input{
+    width: min(420px, 90vw);
+    max-width: 90vw;
+  }
+}
+
+/* small phones */
+@media (max-width: 520px){
+  .nav-search input{ display: none; }
+
+  /* chips wrap */
+  .pod-chips{ flex-wrap: wrap; }
+
+  /* headings a bit smaller */
+  .main-header{ font-size: clamp(28px, 8vw, 44px); }
+}
+
+
+
+
