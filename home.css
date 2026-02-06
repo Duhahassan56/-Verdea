@@ -106,15 +106,6 @@
   color: aliceblue;
 }
 
-.hero-action {
-  position: relative;
-  z-index: 5;
-  margin-top: 32px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .btn {
   background: transparent;
   cursor: pointer;
@@ -124,6 +115,7 @@
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
+  font-size: 18px;
   transition: all 0.3s ease;
 }
 
@@ -134,143 +126,144 @@
 
 
 /* why us section */
-.intro {
-  padding-top: 160px;   
-  padding-bottom: 40px;
-  margin-top: -80px;
+.why{
+  padding: 70px 24px;
+  padding-right: 0;
 }
 
-
-.intro-layout {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0;
-}
-
-.intro-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
+.why-card{
+  width: 100%;
   margin: 0 auto;
-  gap: 65px;
-}
-
-.intro-text h1 {
-  white-space: nowrap;
-  margin: 0 0 16px;
-  font-size: clamp(34px, 6.5vw, 120px);
-  line-height: 1.05;
-  letter-spacing: 0.04em;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.intro-decor {
-  max-width: 45%;   
-  width: 620px;
-  opacity: 0.9;
-  margin-right: -40px;
-  flex-shrink: 0;
-}
-
-@media (max-width: 520px){
-  .intro-text h1{ 
-    white-space: normal;
- }
-}
-
-
-
-.intro-text p {
-  margin: 24px auto 0;
-  line-height: 1.7;
-  opacity: 0.85;
-  font-size: clamp(16px, 2.2vw, 22px);
-  max-width: 60ch;
-  text-align: center;
-  opacity: 0.85;
-}
-
-@media (max-width: 900px) {
-  .intro {
-    overflow: visible;
-  }
-
-  .intro-decor {
-    position: static;
-    width: min(320px, 80%);
-    height: auto;
-    margin: 24px auto 0;
-    display: block;
-  }
-}
-
-/* Why points */
-.why-verdea-points {
-  padding-top: 0;
-  position: relative;
-}
-
-.why-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
+  grid-template-columns: 1fr 0.6fr;
+  gap: 28px;
+  padding: 40px 0 40px 40px;
+}
+
+.why-text h2{
+  font-size: clamp(40px, 5vw, 75px);
+  margin: 0 0 42px;
   text-align: center;
 }
 
-.why-item h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
+.why-text p{
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
 }
 
-.why-item p {
-  font-size: 17px;
+
+.why-media{
+  overflow: hidden;
+  position: relative;
+  margin-right: 0;
+  justify-content: end;
+}
+
+.why-media img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: right center; 
+}
+
+
+.why-action{
+  display: flex;
+  justify-content: center;
+  margin: 32px 40px;
+}
+
+
+/* points */
+.why-points{
+  max-width: 700px;
+  margin: 45px auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+
+.why-point{
+  width: 220px;        
+  padding: 16px 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(0,0,0,0.5);
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+
+.why .why-point{
+  overflow: hidden;     
+}
+
+.why .why-point p{
+  display: block;
+  max-width: 100%;
+  white-space: normal !important;   
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.why-point h3{
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.why-point p{
+  margin: 10px 0;
+  font-size: 13px;
   line-height: 1.6;
-  color: #444;
+  opacity: 0.85;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .why-grid {
+
+
+/* responsive */
+@media (max-width: 900px){
+  .why-card{
     grid-template-columns: 1fr;
-    gap: 24px;
+    padding: 28px;
   }
 
-  .intro {
-    padding-bottom: 24px;
+  .why-points{
+    grid-template-columns: 1fr;
+  }
+
+  .why-media{
+    height: 240px;
   }
 }
+
 
 
 /* Daily section */
 .daily {
-  padding: 10px 40px;
+  padding: 10px 20px;
 }
 
 .daily-grid{
-  max-width: 90%;
+  max-width: 95%;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 28px;
   display: grid;
-  grid-template-columns: 65% 35%;
-  gap: 60px;
-  align-items: start;
+  grid-template-columns: 60% 40%;
+  gap: 50px;
+  align-items: stretch;
 }
 
 @media (max-width: 980px) {
   .daily-grid {
     grid-template-columns: 1fr;
   }
-}
-
-.daily::before {
-  content: "";
-  display: block;
-  width: 400px;
-  height: 2px;
-  background: #7fa26b;
-  margin: 50px auto 100px;
-  opacity: 0.4;
 }
 
 /* Mini Quiz */
@@ -282,10 +275,18 @@
   max-width: 520px;
   min-width: 0;
   width: 100%;
+  min-height: 320px;
   justify-content: end;
   margin-left: auto;
   box-shadow: 0 20px 40px rgba(0,0,0,0.06);
 }
+
+.quiz{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 
 .quiz-tittle {
   margin: 0 0 6px;
@@ -436,7 +437,7 @@
 
 /* Plant of the day */
 .pod {
-  background: #92b761;
+  background: #99BC85;
   border: 1px solid rgba(0,0,0,0.88);
   border-radius: 18px;
   overflow: hidden;
@@ -608,6 +609,7 @@
   padding: 14px 16px;
   border-radius: 999px;
   border: 1px solid rgba(0,0,0,0.88);
+  background: #f3f5f3;
   font-family: inherit;
 }
 
